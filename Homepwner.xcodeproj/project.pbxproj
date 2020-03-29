@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		442AE4FC240AE7E300D900D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442AE4FB240AE7E300D900D0 /* AppDelegate.swift */; };
 		442AE4FE240AE7E300D900D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442AE4FD240AE7E300D900D0 /* SceneDelegate.swift */; };
-		442AE500240AE7E300D900D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442AE4FF240AE7E300D900D0 /* ViewController.swift */; };
 		442AE503240AE7E300D900D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442AE501240AE7E300D900D0 /* Main.storyboard */; };
 		442AE505240AE7E700D900D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 442AE504240AE7E700D900D0 /* Assets.xcassets */; };
 		442AE508240AE7E700D900D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442AE506240AE7E700D900D0 /* LaunchScreen.storyboard */; };
 		442AE513240AE7E800D900D0 /* HomepwnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442AE512240AE7E800D900D0 /* HomepwnerTests.swift */; };
 		442AE51E240AE7E800D900D0 /* HomepwnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442AE51D240AE7E800D900D0 /* HomepwnerUITests.swift */; };
+		442AE52C240AE82000D900D0 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442AE52B240AE82000D900D0 /* ItemsViewController.swift */; };
+		442AE52E240AE8F100D900D0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442AE52D240AE8F100D900D0 /* Item.swift */; };
+		442AE530240AE9C100D900D0 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442AE52F240AE9C100D900D0 /* ItemStore.swift */; };
+		442AE532240AFE7C00D900D0 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442AE531240AFE7C00D900D0 /* ItemCell.swift */; };
+		442AE534240B14EA00D900D0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442AE533240B14EA00D900D0 /* DetailViewController.swift */; };
+		44F636492418938700E50BEA /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F636482418938700E50BEA /* ImageStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,6 @@
 		442AE4F8240AE7E300D900D0 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		442AE4FB240AE7E300D900D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		442AE4FD240AE7E300D900D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		442AE4FF240AE7E300D900D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		442AE502240AE7E300D900D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		442AE504240AE7E700D900D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		442AE507240AE7E700D900D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,12 @@
 		442AE519240AE7E800D900D0 /* HomepwnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomepwnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		442AE51D240AE7E800D900D0 /* HomepwnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepwnerUITests.swift; sourceTree = "<group>"; };
 		442AE51F240AE7E800D900D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		442AE52B240AE82000D900D0 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		442AE52D240AE8F100D900D0 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		442AE52F240AE9C100D900D0 /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		442AE531240AFE7C00D900D0 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		442AE533240B14EA00D900D0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		44F636482418938700E50BEA /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +111,16 @@
 			children = (
 				442AE4FB240AE7E300D900D0 /* AppDelegate.swift */,
 				442AE4FD240AE7E300D900D0 /* SceneDelegate.swift */,
-				442AE4FF240AE7E300D900D0 /* ViewController.swift */,
 				442AE501240AE7E300D900D0 /* Main.storyboard */,
 				442AE504240AE7E700D900D0 /* Assets.xcassets */,
 				442AE506240AE7E700D900D0 /* LaunchScreen.storyboard */,
 				442AE509240AE7E700D900D0 /* Info.plist */,
+				442AE52B240AE82000D900D0 /* ItemsViewController.swift */,
+				442AE52D240AE8F100D900D0 /* Item.swift */,
+				442AE52F240AE9C100D900D0 /* ItemStore.swift */,
+				442AE531240AFE7C00D900D0 /* ItemCell.swift */,
+				442AE533240B14EA00D900D0 /* DetailViewController.swift */,
+				44F636482418938700E50BEA /* ImageStore.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -259,9 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				442AE500240AE7E300D900D0 /* ViewController.swift in Sources */,
+				442AE52E240AE8F100D900D0 /* Item.swift in Sources */,
+				442AE52C240AE82000D900D0 /* ItemsViewController.swift in Sources */,
+				442AE532240AFE7C00D900D0 /* ItemCell.swift in Sources */,
+				44F636492418938700E50BEA /* ImageStore.swift in Sources */,
 				442AE4FC240AE7E300D900D0 /* AppDelegate.swift in Sources */,
+				442AE530240AE9C100D900D0 /* ItemStore.swift in Sources */,
 				442AE4FE240AE7E300D900D0 /* SceneDelegate.swift in Sources */,
+				442AE534240B14EA00D900D0 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
