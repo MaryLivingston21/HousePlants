@@ -9,8 +9,11 @@
 import UIKit
 class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet var nameField: UITextField!
+    @IBOutlet var lightField: UITextField!
+    @IBOutlet var waterField: UITextField!
     @IBOutlet var plantSizeField: UITextField!
     @IBOutlet var valueField: UITextField!
+    @IBOutlet var notesField: UITextField!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     
@@ -41,8 +44,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         super.viewWillAppear(animated)
         
         nameField.text = item.name
+        lightField.text = item.light
+        waterField.text = item.water
         plantSizeField.text = item.plantSize
         valueField.text = numberFormatter.string(from: NSNumber(value: item.valueInDollars))
+        notesField.text = item.notes
         dateLabel.text = dateFormatter.string(from: item.dateCreated)
         
         // Get the item key
@@ -62,13 +68,16 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         
         // "Save" changes to item
         item.name = nameField.text ?? ""
-        item.plantSize = plantSizeField.text
+        item.light = lightField.text ?? ""
+        item.water = waterField.text ?? ""
+        item.plantSize = plantSizeField.text ?? ""
         if let valueText = valueField.text,
             let value = numberFormatter.number(from: valueText) {
             item.valueInDollars = value.intValue
         } else {
             item.valueInDollars = 0
         }
+        item.notes = notesField.text ?? ""
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

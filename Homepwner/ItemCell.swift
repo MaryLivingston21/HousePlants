@@ -9,8 +9,8 @@
 import UIKit
 class ItemCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var valueLabel: UILabel!
     @IBOutlet var plantSizeLabel: UILabel!
+    @IBOutlet var valueLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
