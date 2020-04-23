@@ -47,6 +47,7 @@ class ItemsViewController: UITableViewController {
             // Insert this new row into the table
             tableView.insertRows(at: [indexPath], with: .automatic)
         }
+        performSegue(withIdentifier: "showNewItem", sender: nil)
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -95,6 +96,17 @@ class ItemsViewController: UITableViewController {
                 detailViewController.item = item
                 detailViewController.imageStore = imageStore
             }
+        case "showNewItem"?:
+            print("this")
+            // get last row
+            let lastSectionIndex = self.tableView.numberOfSections - 1
+            // Then grab the number of rows in the last section
+            let lastRowIndex = self.tableView.numberOfRows(inSection: lastSectionIndex) - 1
+            // Get the item associated with this row and pass it along
+            let item = itemStore.allItems[lastRowIndex]
+            let detailViewController = segue.destination as! DetailViewController
+            detailViewController.item = item
+            detailViewController.imageStore = imageStore
         default:
             preconditionFailure("Unexpected segue identifier.")
         }

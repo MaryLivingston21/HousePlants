@@ -30,7 +30,7 @@ class Item: NSObject, NSCoding {
         super.init()
     }
     
-    convenience init(random: Bool = false) {
+    convenience init(random: Bool) {
         if random {
             let plants = ["Spider Plant", "Air Plant", "Snake Plant", "Croton", "Cactus", "Pothos", "Fern", "String of Pearls", "String of Turtles"]
             let lightPref = ["Full Sun", "Part Sun", "In-direct light", "Shade"]

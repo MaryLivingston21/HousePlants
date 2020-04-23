@@ -42,7 +42,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         nameField.text = item.name
         lightField.text = item.light
         waterField.text = item.water
