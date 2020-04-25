@@ -8,6 +8,10 @@
 
 import UIKit
 class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+
+    var imageStore: ImageStore!
+    var itemStore: ItemStore!
+    
     @IBOutlet var nameField: UITextField!
     @IBOutlet var lightField: UITextField!
     @IBOutlet var waterField: UITextField!
@@ -23,7 +27,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         }
     }
     
-    var imageStore: ImageStore!
     
     let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -87,6 +90,28 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
+    @IBAction func deleteItem(_ sender: UIBarButtonItem) {
+        let title = "Delete \(item.name)?"
+        let message = "Are you sure you want to delete this item?"
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        ac.addAction(cancelAction)
+        
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { (action) -> Void in
+            
+            if (self.item != nil && self.itemStore != nil){
+                self.itemStore.removeItem(self.item)
+            }
+            
+            //leave view controller
+            self.performSegue(withIdentifier: "returnToTableView", sender: nil)
+        })
+        ac.addAction(deleteAction)
+        
+        // Present the alert controller
+        present(ac, animated: true, completion: nil)
+    }
     
     @IBAction func takePicture(_ sender: UIBarButtonItem) {
         let imagePicker = UIImagePickerController()
@@ -120,6 +145,17 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         // Take image picker off the screen -
         //you must call this dismiss method
         dismiss(animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { // If the triggered segue is the "showItem" segue
+        switch segue.identifier {
+        case "returnToTableView"?:
+                let itemViewController = segue.destination as! ItemsViewController
+                itemViewController.itemStore = itemStore
+                itemViewController.imageStore = imageStore
+        default:
+            preconditionFailure("Unexpected segue identifier.")
+        }
     }
     
 
